@@ -1,12 +1,3 @@
-function GodzinaMinuty() {
-    const czas = new Date().toLocaleTimeString("pl-PL", {timezone: "Europe/Warsaw"});
-
-    let czasSpan = document.getElementById("czas");
-    czasSpan.innerHTML = czas;
-}
-GodzinaMinuty();
-setInterval(GodzinaMinuty, 1000); // 1000 ms = 1s
-
 function dzienTygodnia(){
     const data = new Date().toLocaleDateString("pl-PL", {timezone: "Europe/Warsaw"});
     const dzienTygodnia = new Date().getDay(data);
@@ -50,3 +41,12 @@ function pelnaData(){
 }
 pelnaData();
 setInterval(pelnaData, 86400000) // 86400000 ms = 1d
+
+function GodzinaMinuty() {
+    const czas = new Date().toLocaleTimeString("pl-PL", {timezone: "Europe/Warsaw"});
+
+    let czasSpan = document.getElementById("czas");
+    czasSpan.innerHTML = czas;
+}
+GodzinaMinuty();
+setInterval(GodzinaMinuty, 1000); // 1000 ms = 1s
