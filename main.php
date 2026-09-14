@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>Strona</h1>
+    <h2>Hej</h2>
 </body>
 </html>
