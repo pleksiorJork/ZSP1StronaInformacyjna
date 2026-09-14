@@ -1,0 +1,64 @@
+html, body {
+    max-height: 100dvh;
+}
+body {
+    background-color: rgb(231, 231, 231);
+}
+.header-wrapper {
+    background-color: darkred;
+    color: white;
+    height: 5dvh;
+    align-items: center;
+    display: flex;
+}
+header {
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 94%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.lewo, .prawo{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.lewo {
+    flex-basis: 33.33%;
+}
+.prawo {
+    flex-basis: 66.66%;
+}
+.dzienData {
+    display: flex;
+    flex-direction: column;
+}
+main {
+    display: grid;
+    gap: 3px;
+    margin-top: 0.75dvh;
+    background-color: dodgerblue;
+    grid-template-columns: auto auto auto auto auto;
+    height: 75dvh;
+    border: 2px solid black;
+    padding: 3px;
+}
+main div {
+    background-color: #f1f1f1;
+    border: 2px solid black;
+    padding: 10px;
+}
+.zastepstwa {
+    grid-column-start: 3;
+    grid-column-end: 6;
+}
+.zdjecia {
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+footer {
+    background-color: goldenrod;
+    height: 16.75dvh;
+}
