@@ -11,7 +11,7 @@
         <header>
             <div class="lewo">
                 <div class="logo">
-                    LOGO
+                    <img src="../prototyp/img/logo.png" height="80dvh" width="auto">
                 </div>
                 <div class="nazwa">
                     ZSP 1
@@ -19,11 +19,11 @@
             </div>
             <div class="prawo">
                 <div class="dzienData">
-                    <span>dzien tygodnia</span>
-                    <span>data</span>
+                    <span id="dzien">dzien tygodnia</span>
+                    <span id="data">data</span>
                 </div>
                 <div class="czas">
-                    <span>czas</span>
+                    <span id="czas">czas</span>
                 </div>
                 <div class="pogoda">
                     <span>pogoda</span>
@@ -35,27 +35,45 @@
         </header>
     </div>
     <main>
-        <div class="komunikaty">
-            <span>Komunikaty</span>
+        <div class="zdjecie">
+            <img src="../prototyp/img/zdjecieszkoly.png">
         </div>
         <div class="informacja">
             <span>Informacja o zebraniach</span>
+            <table class="informacje-table">
+                <tr>
+                    <td>17.09</td>
+                    <td>Zebranie z rodzicami (17:30)</td>
+                </tr>
+                <tr>
+                    <td>31.12</td>
+                    <td>lorem ipsum</td>
+                </tr>
+            </table>
+        </div>
+        <div class="komunikaty">
+            <span>Komunikaty</span>
+        </div>
+        <div class="kodqr">
+            <img src="../prototyp/img/qr.png" width="150" height="auto">
         </div>
         <div class="zastepstwa">
-            <span>zastepstwa</span>
+            <span>Zastępstwa na jutro</span>
+            <br/>
+            <img src="../prototyp/img/proto-zastepstwa.png" width="auto" height="400">
         </div>
         <div class="cytat">
-            <span>cytat</span>
+            <span class="cytat-span"><i>,,Statek w porcie jest bezpieczny, ale nie po to buduje się statki."</i></span>
+            <br>
+            <span class="autor-span">- Grace Murray Hopper</span>
         </div>
         <div class="zdjecia">
             <span>slider zdjec</span>
-        </div>
-        <div class="kodqr">
-            <span>kod qr</span>
         </div>
     </main>
     <footer>
         stopka jakies informacje i inny szajs
     </footer>
+    <script src="../prototyp/script.js"></script>
 </body>
 </html>

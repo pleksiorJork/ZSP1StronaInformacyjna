@@ -43,10 +43,10 @@ pelnaData();
 setInterval(pelnaData, 86400000) // 86400000 ms = 1d
 
 function GodzinaMinuty() {
-    const czas = new Date().toLocaleTimeString("pl-PL", {timezone: "Europe/Warsaw"});
+    const czas = new Date().toLocaleTimeString("pl-PL", {timezone: "Europe/Warsaw", hour: "2-digit", minute: "2-digit"});
 
     let czasSpan = document.getElementById("czas");
     czasSpan.innerHTML = czas;
 }
 GodzinaMinuty();
-setInterval(GodzinaMinuty, 1000); // 1000 ms = 1s
+setInterval(GodzinaMinuty, 60000); // 60000 ms = 1min
