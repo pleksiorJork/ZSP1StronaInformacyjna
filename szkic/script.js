@@ -51,3 +51,87 @@ function GodzinaMinuty() {
 GodzinaMinuty();
 setInterval(GodzinaMinuty, 60000); // 60000 ms = 1min
 
+function poprzedni(n) {
+    console.log(n);
+    switch(n) {
+        case 1:
+            document.getElementById("wydarzenie1").style.display = "none";
+            document.getElementById("wydarzenie5").style.display = "block";
+            document.getElementById("wydarzenie2-klon").style.display = "none";
+            document.getElementById("wydarzenie2").style.display = "block";
+            document.getElementById("wydarzenie3-klon").style.display = "none";
+            document.getElementById("wydarzenie3").style.display = "block";
+            document.getElementById("wydarzenie4-klon").style.display = "none";
+            document.getElementById("wydarzenie4").style.display = "block";
+            break;
+        case 6:
+            document.getElementById("wydarzenie2").style.display = "none";
+            document.getElementById("wydarzenie6").style.display = "block";
+            break;
+        case 5:
+            document.getElementById("wydarzenie3").style.display = "none";
+            document.getElementById("wydarzenie1-klon").style.display = "block";
+            break;
+        case 4:
+            document.getElementById("wydarzenie4").style.display = "none";
+            document.getElementById("wydarzenie2-klon").style.display = "block";
+            break;
+        case 3:
+            document.getElementById("wydarzenie5").style.display = "none";
+            document.getElementById("wydarzenie3-klon").style.display = "block";
+            break;
+        case 2:
+            document.getElementById("wydarzenie6").style.display = "none";
+            document.getElementById("wydarzenie1").style.display = "block";
+            document.getElementById("wydarzenie1-klon").style.display = "none";
+            document.getElementById("wydarzenie4-klon").style.display = "block";
+            break;
+        default:
+            document.write("za nisko");
+    }
+}
+function nastepny(n){
+    console.log(n);
+    switch(n) {
+        case 1:
+            document.getElementById("wydarzenie6").style.display = "block";
+            document.getElementById("wydarzenie1-klon").style.display = "block";
+            document.getElementById("wydarzenie1").style.display = "none";
+            document.getElementById("wydarzenie2-klon").style.display = "block";
+            document.getElementById("wydarzenie2").style.display = "none";
+            document.getElementById("wydarzenie3-klon").style.display = "block";
+            document.getElementById("wydarzenie3").style.display = "none";
+            document.getElementById("wydarzenie4").style.display = "none";
+            break;
+        case 2:
+            document.getElementById("wydarzenie3-klon").style.display = "none";
+            document.getElementById("wydarzenie5").style.display = "block";
+            break;
+        case 3:
+            document.getElementById("wydarzenie2-klon").style.display = "none";
+            document.getElementById("wydarzenie4").style.display = "block";
+            break;
+        case 4:
+            document.getElementById("wydarzenie3").style.display = "block";
+            document.getElementById("wydarzenie1-klon").style.display = "none";
+            break;
+        case 5:
+            document.getElementById("wydarzenie6").style.display = "none";
+            document.getElementById("wydarzenie2").style.display = "block";
+            break;
+        case 6:
+            document.getElementById("wydarzenie1").style.display = "block";
+            document.getElementById("wydarzenie2").style.display = "block";
+            document.getElementById("wydarzenie3").style.display = "block";
+            document.getElementById("wydarzenie4").style.display = "block";
+            document.getElementById("wydarzenie1-klon").style.display = "none";
+            document.getElementById("wydarzenie2-klon").style.display = "none";
+            document.getElementById("wydarzenie3-klon").style.display = "none";
+            document.getElementById("wydarzenie4-klon").style.display = "none";
+            document.getElementById("wydarzenie5").style.display = "none";
+            document.getElementById("wydarzenie6").style.display = "none";
+            break;
+        default:
+            document.write("za wysoko");
+    }
+}

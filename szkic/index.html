@@ -69,52 +69,83 @@
         </div>
         <div class="zdjecia">
             <div class="slider">
-                <div class="wydarzenie wydarzenie1">
+                <div class="wydarzenie" id="wydarzenie1">
                     <img src="../prototyp/img/placeholder.svg" height="auto" width="200">
                     <div class="tekst-pod">
                         <span class="duzy">Coś się stało1</span>
                         <a class="maly" href="#">Dowiedz się więcej</a>
                     </div>
                 </div>
-                <div class="wydarzenie wydarzenie2">
+                <div class="wydarzenie" id="wydarzenie2">
                     <img src="../prototyp/img/placeholder2.jpg" height="auto" width="200">
                     <div class="tekst-pod">
                         <span class="duzy">Coś się stało2</span>
                         <a class="maly" href="#">Dowiedz się więcej</a>
                     </div>
                 </div>
-                <div class="wydarzenie wydarzenie3">
+                <div class="wydarzenie" id="wydarzenie3">
                     <img src="../prototyp/img/placeholder.svg" height="auto" width="200">
                     <div class="tekst-pod">
                         <span class="duzy">Coś się stało3</span>
                         <a class="maly" href="#">Dowiedz się więcej</a>
                     </div>
                 </div>
-                <div class="wydarzenie wydarzenie4">
+                <div class="wydarzenie" id="wydarzenie4">
                     <img src="../prototyp/img/placeholder2.jpg" height="auto" width="200">
                     <div class="tekst-pod">
                         <span class="duzy">Coś się stało4</span>
                         <a class="maly" href="#">Dowiedz się więcej</a>
                     </div>
                 </div>
-                <div class="wydarzenie wydarzenie5">
+                <div class="wydarzenie" id="wydarzenie5">
                     <img src="../prototyp/img/placeholder2.jpg" height="auto" width="200">
                     <div class="tekst-pod">
                         <span class="duzy">Coś się stało5</span>
                         <a class="maly" href="#">Dowiedz się więcej</a>
                     </div>
                 </div>
-                <div class="wydarzenie wydarzenie6">
+                <div class="wydarzenie" id="wydarzenie6">
                     <img src="../prototyp/img/placeholder2.jpg" height="auto" width="200">
                     <div class="tekst-pod">
                         <span class="duzy">Coś się stało6</span>
                         <a class="maly" href="#">Dowiedz się więcej</a>
                     </div>
                 </div>
+                <div class="wydarzenie" id="wydarzenie1-klon">
+                    <img src="../prototyp/img/placeholder.svg" height="auto" width="200">
+                    <div class="tekst-pod">
+                        <span class="duzy">Coś się stało1</span>
+                        <a class="maly" href="#">Dowiedz się więcej</a>
+                    </div>
+                </div>
+                <div class="wydarzenie" id="wydarzenie2-klon">
+                    <img src="../prototyp/img/placeholder2.jpg" height="auto" width="200">
+                    <div class="tekst-pod">
+                        <span class="duzy">Coś się stało2</span>
+                        <a class="maly" href="#">Dowiedz się więcej</a>
+                    </div>
+                </div>
+                <div class="wydarzenie" id="wydarzenie3-klon">
+                    <img src="../prototyp/img/placeholder.svg" height="auto" width="200">
+                    <div class="tekst-pod">
+                        <span class="duzy">Coś się stało3</span>
+                        <a class="maly" href="#">Dowiedz się więcej</a>
+                    </div>
+                </div>
+                <div class="wydarzenie" id="wydarzenie4-klon">
+                    <img src="../prototyp/img/placeholder2.jpg" height="auto" width="200">
+                    <div class="tekst-pod">
+                        <span class="duzy">Coś się stało4</span>
+                        <a class="maly" href="#">Dowiedz się więcej</a>
+                    </div>
+                </div>
             </div>
             <div class="przyciski-zdjec">
-                <span id="poprzedni">&#8592;</span>
-                <span id="nastepny">&#8594;</span>
+                <script>
+                    let n = 1;
+                </script>
+                <button id="poprzedni" onclick="poprzedni(n); n==1 ? n=6 : n--;">&#8592;</button>
+                <button id="nastepny" onclick="nastepny(n); n==6 ? n=1 : n++;">&#8594;</button>
             </div>
         </div>
     </main>

@@ -91,7 +91,7 @@ main > div {
     flex-direction: column;
     align-items: center;
 }
-.wydarzenie5, .wydarzenie6 {
+#wydarzenie5, #wydarzenie6, #wydarzenie1-klon, #wydarzenie2-klon, #wydarzenie3-klon, #wydarzenie4-klon {
     display: none;
 }
 .tekst-pod {
@@ -103,11 +103,14 @@ main > div {
     font-size: 11px;
     color: gray;
 }
-.przyciski-zdjec {
-    font-size: 50px;
-}
 #poprzedni, #nastepny {
     cursor: pointer;
+    border: none;
+    font-size: 50px;
+    background: none;
+}
+#poprzedni:hover, #nastepny:hover {
+    background-color: lightblue;
 }
 .cytat-span{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
