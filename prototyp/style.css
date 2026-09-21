@@ -11,6 +11,9 @@ body {
     flex-grow: 1;
     overflow-y: auto;
 }
+.nested-row {
+    overflow-y: auto;
+}
 .col-12 {
     border: 1px solid black;
 }

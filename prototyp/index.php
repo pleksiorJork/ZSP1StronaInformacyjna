@@ -19,11 +19,11 @@
             <div class="col-md-4 col-12">
                 INFORMACJE/KOMUNIKATY
             </div>
-            <div class="col-md-4 col-12">
-                <div class="row">
+            <div class="col-md-4 col-12 d-flex flex-column">
+                <div class="nested-row" style="height: 25%; border-bottom: 1px solid black;">
                     CYTAT / KOD QR
                 </div>
-                <div class="row">
+                <div class="nested-row" style="height: 75%;">
                     ZASTEPSTWA
                 </div>
             </div>
