@@ -1,11 +1,16 @@
-.header {
-    background: #093479;
-    background: linear-gradient(270deg,rgba(9, 52, 121, 1) 0%, rgba(8, 59, 126, 1) 22%, rgba(0, 164, 196, 1) 100%);
-    color: white
-}
-.logo-szkoly {
-    width: 65%;
-}
-.czas-span {
+html {
     height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    margin: 0;
+}
+.kontener-glowny {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+.col-12 {
+    border: 1px solid black;
 }
