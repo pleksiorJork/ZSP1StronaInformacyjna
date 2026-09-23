@@ -1,3 +1,21 @@
+// https://gist.github.com/farhad-taran/f487a07c16fd53ee08a12a90cdaea082
+function runAtSpecificTimeOfDay(hour, minutes, func)
+{
+  const twentyFourHours = 86400000;
+  const now = new Date();
+  let eta_ms = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hour, minutes, 0, 0).getTime() - now;
+  if (eta_ms < 0)
+  {
+    eta_ms += twentyFourHours;
+  }
+  setTimeout(function() {
+    //run once
+    func();
+    // run every 24 hours from now on
+    setInterval(func(), twentyFourHours);
+  }, eta_ms);
+}
+
 function dzienTygodnia(){
     const data = new Date().toLocaleDateString("pl-PL", {timezone: "Europe/Warsaw"});
     const dzienTygodnia = new Date().getDay(data);
@@ -30,8 +48,6 @@ function dzienTygodnia(){
             break;
     }
 }
-dzienTygodnia();
-setInterval(dzienTygodnia, 86400000); // 86400000 ms = 1d
 
 function pelnaData(){
     const pelnaData = new Date().toLocaleDateString("pl-PL", {timezone: "Europe/Warsaw"});
@@ -39,8 +55,6 @@ function pelnaData(){
     let dataSpan = document.getElementById("data");
     dataSpan.innerHTML = pelnaData;
 }
-pelnaData();
-setInterval(pelnaData, 86400000) // 86400000 ms = 1d
 
 function GodzinaMinuty() {
     const czas = new Date().toLocaleTimeString("pl-PL", {timezone: "Europe/Warsaw", hour: "2-digit", minute: "2-digit"});
@@ -48,5 +62,9 @@ function GodzinaMinuty() {
     let czasSpan = document.getElementById("czas");
     czasSpan.innerHTML = czas;
 }
+
 GodzinaMinuty();
-setInterval(GodzinaMinuty, 60000); // 60000 ms = 1min
+setInterval(GodzinaMinuty, 100);
+
+runAtSpecificTimeOfDay(0, 0, dzienTygodnia());
+runAtSpecificTimeOfDay(0, 0, pelnaData());

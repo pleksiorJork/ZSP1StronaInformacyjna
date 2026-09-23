@@ -7,6 +7,10 @@ body {
     height: 100dvh;
     margin: 0;
 }
+.naglowek, .stopka {
+    background: linear-gradient(270deg,rgba(9, 52, 121, 1) 0%, rgba(8, 59, 126, 1) 22%, rgba(0, 164, 196, 1) 100%);
+    color: white;
+}
 .kontener-glowny {
     flex-grow: 1;
     overflow-y: auto;
