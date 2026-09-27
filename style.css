@@ -1,5 +1,44 @@
-h1 {
-    font-family: Gill Sans;
-    color: blue;
-    letter-spacing: 10px;
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    overflow: hidden;
+}
+.naglowek, .stopka {
+    background: linear-gradient(270deg,rgba(9, 52, 121, 1) 0%, rgba(8, 59, 126, 1) 22%, rgba(0, 164, 196, 1) 100%);
+    color: white;
+    flex: 0 0 auto;
+}
+.img-motto, .img-logo {
+    max-height: 61px;
+}
+.kontener-glowny {
+    flex: 1 1 auto;
+    min-height: 0;
+    @media screen and (max-width: 768px) {
+        overflow: hidden;
+    }
+}
+.col-12 {
+    border: 1px solid black;
+}
+.informacje-wrapper {
+    background-color: #FAE4E6; 
+    height:100%; 
+    width: 100%; 
+    overflow: hidden;
+    border-radius: 25px;
+}
+.wazne-informacje {
+    border-radius: 10px;
+}
+.stopka {
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 15px 15px 0px 0px;
+    border-radius: 15px 15px 0px 0px; 
+
 }

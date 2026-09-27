@@ -63,6 +63,39 @@ function GodzinaMinuty() {
     czasSpan.innerHTML = czas;
 }
 
+const openMeteoUrl = "https://api.open-meteo.com/v1/forecast?latitude=51.2784&longitude=17.9891&timezone=Europe%2FBerlin&forecast_days=1&hourly=&current=temperature_2m,cloud_cover,surface_pressure,rain";
+fetch(openMeteoUrl)
+    .then(response => {
+        if(!response.ok) {
+            throw new Error(`Brak polączenia z OpenMeteo`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        document.getElementById("pogoda").innerHTML = Math.round(data.current.temperature_2m) + " °C"
+        document.getElementById("pogoda").classList.add("fs-1");
+        switch(data.current.cloud_cover) {
+            case 0:
+                document.getElementById("pogoda-ikona").src = "img/pogoda/sunny.png";
+                break;
+            case 1:
+                document.getElementById("pogoda-ikona").src = "img/pogoda/sunnyperiods.png";
+                break;
+            case 2:
+                document.getElementById("pogoda-ikona").src = "img/pogoda/sunnyintervals.png";
+                break;
+            case 3:
+                document.getElementById("pogoda-ikona").src = "img/pogoda/cloudy.png";
+                break;
+            default:
+                document.getElementById("pogoda-ikona").src = "";
+                break;
+        }
+    })
+    .catch(error => {
+        console.error("Błąd OpenMeteo: ", error);
+    })
+
 GodzinaMinuty();
 setInterval(GodzinaMinuty, 100);
 

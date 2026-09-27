@@ -17,7 +17,7 @@
             <div class="col-md-5 col-10 d-flex align-items-center">
                 <span class="fw-bold fs-1">ZSP nr 1 w Kępnie</span>
             </div>
-            <div class="col-md-1 col-3 align-items-center" style="border-right: 1px solid grey;">
+            <div class="col-md-1 col-3 align-items-center d-block" style="border-right: 2px solid white">
                 <div class="row">
                     <span id="dzien" class="fs-3"></span>
                 </div>
@@ -29,10 +29,11 @@
                 <span id="czas" class="fs-1"></span>
             </div>
             <div class="col-md-2 col-3 d-flex align-items-center">
-                <span class="fs-1">pogoda</span>
+                <img id="pogoda-ikona">
+                <span id="pogoda">Ładowanie pogody...</span>
             </div>
             <div class="col-md-1 col-3 d-flex align-items-center">
-                <img src="img/header-motto.png" class="img-motto image-fluid">
+                <img src="img/header-motto.png" class="img-motto img-fluid">
             </div>
         </div>
     </header>
@@ -60,12 +61,19 @@
                     </tr>
                 </table>
             </div>
-            <div class="col-md-4 col-12 bg-danger">
-                blok b i c toalety nieczynne
+            <div class="col-md-4 col-12 py-1">
+                <div class="informacje-wrapper">
+                    <div class="row bg-danger my-2 mx-2 py-1 wazne-informacje">
+                        <span class="text-center fw-bold fs-2" style="color:white;">WAŻNA INFORMACJA</span>
+                    </div>
+                    <div class="row">
+                        <span class="text-center text-primary fs-3 fw-bold">TOALETY W BLOKU B I C SĄ NIECZYNNE</span>
+                    </div>
+                </div>
             </div>
             <div class="col-md-4 col-12 d-flex flex-column">
                 <div class="nested-row" style="height: 25%; border-bottom: 1px solid black;">
-                    CYTAT / KOD QR
+                    <img src="img/qr.png" style="max-height: 100%;">
                 </div>
                 <div class="nested-row" style="height: 75%;">
                     ZASTEPSTWA
@@ -77,7 +85,7 @@
                 GALERIA, WYDARZENIA - SCROLL
             </div>
             <div class="col-md-4 col-12">
-                <img src="img/proto-zastepstwa.png" class="img-fluid">
+                <img src="img/VTI.png" class="img-fluid">
             </div>
         </div>
     </main>
