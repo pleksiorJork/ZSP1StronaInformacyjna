@@ -74,17 +74,18 @@ fetch(openMeteoUrl)
     .then(data => {
         document.getElementById("pogoda").innerHTML = Math.round(data.current.temperature_2m) + " °C"
         document.getElementById("pogoda").classList.add("fs-1");
-        switch(data.current.cloud_cover) {
-            case 0:
+        var cloudCover = data.current.cloud_cover;
+        switch(true) {
+            case (cloudCover <= 25):
                 document.getElementById("pogoda-ikona").src = "img/pogoda/sunny.png";
                 break;
-            case 1:
+            case (cloudCover < 50):
                 document.getElementById("pogoda-ikona").src = "img/pogoda/sunnyperiods.png";
                 break;
-            case 2:
+            case (cloudCover < 75):
                 document.getElementById("pogoda-ikona").src = "img/pogoda/sunnyintervals.png";
                 break;
-            case 3:
+            case (cloudCover <= 100):
                 document.getElementById("pogoda-ikona").src = "img/pogoda/cloudy.png";
                 break;
             default:
