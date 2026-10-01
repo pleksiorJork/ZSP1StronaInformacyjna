@@ -102,3 +102,7 @@ setInterval(GodzinaMinuty, 100);
 
 runAtSpecificTimeOfDay(0, 0, dzienTygodnia());
 runAtSpecificTimeOfDay(0, 0, pelnaData());
+
+
+
+
