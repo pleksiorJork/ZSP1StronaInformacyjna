@@ -17,8 +17,11 @@ body {
     color: #FFFFFF;
     flex: 0 0 auto;
 }
-.img-motto, .img-logo {
+.img-logo {
     max-height: 61px;
+}
+#pogoda, #czas, .nazwa-szkoly {
+    text-shadow: -1.5px 1.5px 6px black;
 }
 .kontener-glowny {
     flex: 1 1 auto;
@@ -47,7 +50,7 @@ body {
     text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     html, body {
         height: auto;
         overflow: auto;          
